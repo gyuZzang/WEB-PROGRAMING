@@ -7,10 +7,12 @@
         <style>
             #header{
                 position: fixed;
+                display: flex;
                 z-index: 10;
                 width: 100%;
             }
             .menu_bar{
+                flex:10;
                 display: flex;
                 flex-wrap: nowrap;
                 justify-content: space-between;
@@ -21,6 +23,11 @@
                 /* float:left; */
                 /* width:10%; */
                
+            }
+            .icon_img{
+                width:100%;
+                max-width: 40px;
+                padding:30%;
             }
             .center_main{
                 width:100%
@@ -74,11 +81,11 @@
     <body>
         <div id="header">
             <!-- <div class="header_container"> -->
-
+                <div class="main_icon">
+                    <a href="#"><img class="icon_img" src="home.png"></a>
+                </div>
                 <ul class="menu_bar">
-                    <div class="main_icon">
-                        <a href="#"><img src="home.png"  width=30px></a>
-                    </div>
+
                     <li class="menu_item">
                         <a href="/intro">
                             <span class="menu_txt">
