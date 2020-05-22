@@ -10,36 +10,60 @@
                 display: flex;
                 z-index: 10;
                 width: 100%;
+                min-width: 500px;
+
+            }
+            .menu_container{
+                position:relative;
+                width:100%;
+                height:50px;
+                border-bottom: 1px solid rgb(255, 224, 52);
+                z-index: 8;
             }
             .menu_bar{
                 flex:10;
+                height: 50px;
+                vertical-align: top;
+                text-align: center;
                 display: flex;
                 flex-wrap: nowrap;
                 justify-content: space-between;
+                margin:5px 0;
             }
             .main_icon{
+                position:absolute;
+                z-index:7;
                 flex:1;
-                margin-right: 30px;
+
                 /* float:left; */
                 /* width:10%; */
                
             }
+            .main_icon>a{
+                width: 100%;
+
+            }
             .icon_img{
                 width:100%;
                 max-width: 40px;
-                padding:30%;
+                padding:5%;
             }
             .center_main{
+                display: flex;
+                flex-direction: column;
                 width:100%
             }
 
             .img_wrapper{
                 position:relative;
+                top:30%;
                 z-index: 0;
                 padding-top:100%;
                 overflow:hidden;
+                margin-bottom: 50px;                
             }
-            .center_main_img{
+            /*z인덱스 안쓰고도 헤더 배치 해결해보기*/
+            .img_wrapper img{
                 position:absolute;
                 z-index: 1;
                 top:0;
@@ -61,8 +85,8 @@
             .menu_item a:hover{
                 color: rgb(255, 208, 0);
                 font-weight: bold;
-                background-color: black;
-                opacity: 0.6;
+                font-size:larger;
+
             }
             .menu_item>a{
                 width: 90%;
@@ -80,46 +104,50 @@
 
     <body>
         <div id="header">
-            <!-- <div class="header_container"> -->
+             
                 <div class="main_icon">
                     <a href="#"><img class="icon_img" src="home.png"></a>
                 </div>
-                <ul class="menu_bar">
+                <div class="menu_container">
+                    <ul class="menu_bar">
 
-                    <li class="menu_item">
-                        <a href="/intro">
-                            <span class="menu_txt">
-                                INTRODUCE
-                            </span>
-                        </a>
-                    </li>                    
-                    <li class="menu_item">
-                        <a href="/account">
-                            <span class="menu_txt">
-                                ACCOUNT
-                            </span>
-                        </a>
-                        
-                    </li>
-                    <li class="menu_item">
-                        <a href="/say_hi">
-                            <span class="menu_txt">
-                                SAY,HI
-                            </span>
-                        </a>
-                    </li>
-                </ul>
+                        <li class="menu_item">
+                            <a href="/intro">
+                                <span class="menu_txt">
+                                    INTRODUCE
+                                </span>
+                            </a>
+                        </li>                    
+                        <li class="menu_item">
+                            <a href="/account">
+                                <span class="menu_txt">
+                                    ACCOUNT
+                                </span>
+                            </a>
+                            
+                        </li>
+                        <li class="menu_item">
+                            <a href="/say_hi">
+                                <span class="menu_txt">
+                                    SAY,HI
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="menu_icon">
                         
                 </div>
-
-            <!-- </div> -->
+                
         </div>
 
         <div id="center">
             <div class="center_main">
                 <div class="img_wrapper">
-                    <img class="center_main_img" src="a.jpg">
+                    <a href=#><img class="center_main_img" src="a.jpg"></a>
+                </div>
+                <div class="img_wrapper">
+                    <a href=#><img class="center_sub_img" src="cebu.jpg"></a>
                 </div>
             </div>
         </div>
