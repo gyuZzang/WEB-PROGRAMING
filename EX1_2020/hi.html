@@ -1,9 +1,15 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
         <link href="https://cdn.rawgit.com/michalsnik/aos/1.0.1/dist/aos.css">
-
+        <script>
+            function store_txt(){
+                var a=documnet.getElementById('ip').value;
+                var newtxtnode=document.createTextNode(a);
+                document.getElementById('res').appendChild(newtxtnode);
+            }
+        </script>
         <style>
             #header{
                 position: fixed;
@@ -74,15 +80,11 @@
                 max-width:100%;
                 height:auto;
                 opacity: 0.7;
-                transition: opacity 0.5s;
-                transition-timing-function: linear;
+
 
             }
             
-            .img_wrapper img:hover{
-                opacity:0.3;
 
-            }
 
             .img_wrapper span{
                 position:absolute;
@@ -94,7 +96,7 @@
                 font-weight: bolder;
                 color:white;
                 font-family: serif;
-
+                text-shadow: 2px 2px 2px gray;
              /* color:white; */
             }
             .menu_item{
@@ -121,6 +123,34 @@
                font-family: serif;
             }
 
+            .text_wrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text_content{
+                display:flex;
+            }
+
+            .input_res{
+                max-width: 50%;
+                display:flex;
+                flex-direction: column;
+            }
+
+            .text_content div{
+                height: 30px;
+            }
+
+            .input_wrp{
+                flex:15;
+            }
+
+            .button_wrp{
+                flex:1;
+            }
+
         </style>
 
     </head>
@@ -135,14 +165,14 @@
                     <ul class="menu_bar">
 
                         <li class="menu_item">
-                            <a href="#intro">
+                            <a href="intro.html">
                                 <span class="menu_txt">
                                     INTRODUCE
                                 </span>
                             </a>
                         </li>                    
                         <li class="menu_item">
-                            <a href="#account">
+                            <a href="acnt.html">
                                 <span class="menu_txt">
                                     ACCOUNT
                                 </span>
@@ -150,7 +180,7 @@
                             
                         </li>
                         <li class="menu_item">
-                            <a href="#say_hi">
+                            <a href="hi.html">
                                 <span class="menu_txt">
                                     SAY,HI
                                 </span>
@@ -167,22 +197,27 @@
         <div id="center">
             <div class="center_main">
                 <div class="img_wrapper">
-                    <a href="intro.html"><img id="intro" src="a.jpg"></a>
+                    <img src="sayhi.jpg">
                     <span>
-                        INTRODUCTION
+                        SAY, HI
                     </span>
                 </div>
-                <div class="img_wrapper">
-                    <a href="acnt.html"><img id="account" src="cebu.jpg"></a>
-                    <span>
-                        ACCOUNT
-                    </span>
-                </div>                
-                <div class="img_wrapper">
-                    <a href="hi.html"><img id="say_hi" src="sayhi.jpg"></a>
-                    <span>
-                        SAY HI
-                    </span>
+                <div class="text_wrapper">
+                    <div class="text_title">
+                        <h2>SAY, HI</h2>
+                        <br>
+                    </div>
+                    <div class="text_content">
+                        <div class="input_wrp">
+                            <input id="ip" type="text" value="글을 남겨주세요">
+                        </div>
+                        <div class="button_wrap"><input type="button" value="입력" onclick=store_txt()></input></div>
+                        
+                    </div>
+                    <div id="res" class="input_res">
+
+                    </div>
+                    
                 </div>
             </div>
         </div>

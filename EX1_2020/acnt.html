@@ -74,15 +74,11 @@
                 max-width:100%;
                 height:auto;
                 opacity: 0.7;
-                transition: opacity 0.5s;
-                transition-timing-function: linear;
+
 
             }
             
-            .img_wrapper img:hover{
-                opacity:0.3;
 
-            }
 
             .img_wrapper span{
                 position:absolute;
@@ -94,7 +90,7 @@
                 font-weight: bolder;
                 color:white;
                 font-family: serif;
-
+                text-shadow: 2px 2px 2px gray;
              /* color:white; */
             }
             .menu_item{
@@ -121,6 +117,16 @@
                font-family: serif;
             }
 
+            .text_wrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .text_content{
+                max-width: 50%;
+            }
+
         </style>
 
     </head>
@@ -135,14 +141,14 @@
                     <ul class="menu_bar">
 
                         <li class="menu_item">
-                            <a href="#intro">
+                            <a href="intro.html">
                                 <span class="menu_txt">
                                     INTRODUCE
                                 </span>
                             </a>
                         </li>                    
                         <li class="menu_item">
-                            <a href="#account">
+                            <a href="acnt.html">
                                 <span class="menu_txt">
                                     ACCOUNT
                                 </span>
@@ -150,7 +156,7 @@
                             
                         </li>
                         <li class="menu_item">
-                            <a href="#say_hi">
+                            <a href="hi.html">
                                 <span class="menu_txt">
                                     SAY,HI
                                 </span>
@@ -167,22 +173,26 @@
         <div id="center">
             <div class="center_main">
                 <div class="img_wrapper">
-                    <a href="intro.html"><img id="intro" src="a.jpg"></a>
-                    <span>
-                        INTRODUCTION
-                    </span>
-                </div>
-                <div class="img_wrapper">
-                    <a href="acnt.html"><img id="account" src="cebu.jpg"></a>
+                    <img src="cebu.jpg">
                     <span>
                         ACCOUNT
                     </span>
-                </div>                
-                <div class="img_wrapper">
-                    <a href="hi.html"><img id="say_hi" src="sayhi.jpg"></a>
-                    <span>
-                        SAY HI
-                    </span>
+                </div>
+                <div class="text_wrapper">
+                    <div class="text_title">
+                        <h2>ACCOUNT</h2>
+                        <br>
+                    </div>
+                    <div class="text_content">
+                        <p>
+                            @ intagram: blablablabla<br>
+                            @ gmail: tndud060@gmail.com<br>
+                            @ facebook: blablablabla<br>
+
+                        </p>
+
+                    </div>
+                    
                 </div>
             </div>
         </div>
